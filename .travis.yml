@@ -1,12 +1,22 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
 language: node_js
 node_js:
   - "stable"
 cache:
   directories:
   - node_modules
+before_script:
+  - ./install.sh
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script:
   - yarn test
   - yarn build
+after_script:
+  - ./cc-test-reporter after-build
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY
