@@ -18,3 +18,7 @@ The main purpose of this APP is to display all the meetings where I've been invo
 4. CloudFront forwards the request to Amazon S3.
 5. S3 performs a secure redirect to scrums.nisevi.com using https protocol.
 6. Amazon S3 objects are versioned and the lifecycle of previous versions is handled with a transition to Amazon Glacier 30 days after the object creation and finally removed after 60 days from becoming a previous version.
+
+## Continuous deployment
+
+![](https://github.com/nisevi/scrums/blob/master/doc/continuous-deployment.png)
