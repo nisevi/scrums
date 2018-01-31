@@ -16,15 +16,20 @@ class App extends Component {
       selectedVideo: null
     };
 
+    this.key = process.env.REACT_APP_YTB_API_KEY_DEV
+    if (process.env.NODE_ENV === 'production') {
+      this.key = process.env.REACT_APP_YTB_API_KEY_PROD
+    }
+    this.opts = {
+      maxResults: 10,
+      key: this.key
+    };
+
     this.videoSearch('agileventures')
   }
 
   videoSearch(term) {
-    const opts = {
-      maxResults: 10,
-      key: process.env.REACT_APP_YTB_API_KEY
-    };
-    YTSearch(term, opts, (err, videos) => {
+    YTSearch(term, this.opts, (err, videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]

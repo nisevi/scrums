@@ -1,7 +1,8 @@
 env:
   global:
     - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
-    - REACT_APP_YTB_API_KEY = $REACT_APP_YTB_API_KEY
+    - REACT_APP_YTB_API_KEY_DEV = $REACT_APP_YTB_API_KEY_DEV
+    - REACT_APP_YTB_API_KEY_PROD = $REACT_APP_YTB_API_KEY_PROD
 language: node_js
 node_js:
   - "stable"
