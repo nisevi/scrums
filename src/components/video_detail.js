@@ -6,7 +6,6 @@ const VideoDetail = ({video}) => {
   }
 
   const url = `https://www.youtube.com/embed/${video.id}`;
-  console.log(video);
   return(
     <div className="video-detail col-md-8">
       <div className="embed-responsive embed-responsive-16by9">
