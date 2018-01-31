@@ -22,7 +22,7 @@ class App extends Component {
   videoSearch(term) {
     const opts = {
       maxResults: 10,
-      key: process.env.YTB_API_KEY
+      key: process.env.REACT_APP_YTB_API_KEY
     };
     YTSearch(term, opts, (err, videos) => {
       this.setState({
