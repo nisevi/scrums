@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import YTSearch from 'youtube-api-search';
+import YTSearch from 'youtube-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
@@ -21,7 +21,11 @@ class App extends Component {
   }
 
   videoSearch(term) {
-    YTSearch({key: API_KEY, term: term}, (videos) => {
+    const opts = {
+      maxResults: 10,
+      key: API_KEY
+    };
+    YTSearch(term, opts, (err, videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
