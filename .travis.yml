@@ -1,6 +1,7 @@
 env:
   global:
     - CC_TEST_REPORTER_ID=$CC_TEST_REPORTER_ID
+    - YTB_API_KEY = $YTB_API_KEY
 language: node_js
 node_js:
   - "stable"
