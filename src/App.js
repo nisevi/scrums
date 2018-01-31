@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -16,8 +17,11 @@ class App extends Component {
       selectedVideo: null
     };
 
+    this.videoSearch('agileventures')
+  }
 
-    YTSearch({key: API_KEY, term: 'agileventures'}, (videos) => {
+  videoSearch(term) {
+    YTSearch({key: API_KEY, term: term}, (videos) => {
       this.setState({
         videos: videos,
         selectedVideo: videos[0]
@@ -26,13 +30,14 @@ class App extends Component {
   }
 
   render() {
+    const videoSearch = _.debounce((term) => {this.videoSearch(term)}, 300);
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <SearchBar/>
+        <SearchBar onSearchTermChange={videoSearch}/>
         <VideoDetail video={this.state.selectedVideo}/>
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
