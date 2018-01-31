@@ -6,7 +6,6 @@ import YTSearch from 'youtube-search';
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
-const API_KEY = 'AIzaSyCDCkv6EWPJtwnP0eTHAyUmyJbKtx_QtBU'
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +22,7 @@ class App extends Component {
   videoSearch(term) {
     const opts = {
       maxResults: 10,
-      key: API_KEY
+      key: process.env.YTB_API_KEY
     };
     YTSearch(term, opts, (err, videos) => {
       this.setState({
