@@ -5095,7 +5095,7 @@ querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
 
-querystring@0.2.0, querystring@^0.2.0:
+querystring@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
@@ -6704,9 +6704,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-youtube-playlist-search@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/youtube-playlist-search/-/youtube-playlist-search-1.0.0.tgz#ebfe45641ef603f8aeb4ac32367ab3d31328ec3d"
+youtube-playlist-search@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/youtube-playlist-search/-/youtube-playlist-search-1.0.1.tgz#bb0637828bae93090514a41193b0b6500f336b16"
   dependencies:
     request "^2.83.0"
     xhr "^2.4.1"
