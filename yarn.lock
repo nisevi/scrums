@@ -6704,9 +6704,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-youtube-playlist-search@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/youtube-playlist-search/-/youtube-playlist-search-1.0.1.tgz#bb0637828bae93090514a41193b0b6500f336b16"
+youtube-playlist-search@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/youtube-playlist-search/-/youtube-playlist-search-1.1.1.tgz#e4670433574c9c4f98b89a5d10b59b47ec9ab0d3"
   dependencies:
     request "^2.83.0"
     xhr "^2.4.1"
