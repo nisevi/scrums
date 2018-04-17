@@ -5,7 +5,7 @@
   "dependencies": {
     "dotenv": "^5.0.0",
     "lodash": "^4.17.5",
-    "react": "^16.3.1",
+    "react": "^16.3.2",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.4",
     "youtube-playlist-search": "^1.1.1"
