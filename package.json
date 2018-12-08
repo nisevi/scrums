@@ -6,14 +6,18 @@
     "dotenv": "^5.0.1",
     "lodash": "^4.17.5",
     "react": "^16.3.2",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.2.1",
     "react-scripts": "1.1.4",
-    "youtube-playlist-search": "^1.1.1"
+    "youtube-playlist-search": "^1.1.1",
+    "snyk": "^1.116.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "NODE_ENV=production react-scripts build",
     "test": "NODE_ENV=test CI=true react-scripts test --env=jsdom --coverage",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
