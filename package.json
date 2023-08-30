@@ -8,12 +8,16 @@
     "react": "^16.3.2",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.4",
-    "youtube-playlist-search": "^1.1.1"
+    "youtube-playlist-search": "^1.1.1",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "NODE_ENV=production react-scripts build",
     "test": "NODE_ENV=test CI=true react-scripts test --env=jsdom --coverage",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
