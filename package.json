@@ -6,8 +6,8 @@
     "dotenv": "^5.0.1",
     "lodash": "^4.17.5",
     "react": "^16.3.2",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.4",
+    "react-dom": "^16.2.1",
+    "react-scripts": "4.0.0",
     "youtube-playlist-search": "^1.1.1"
   },
   "scripts": {
